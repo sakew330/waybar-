@@ -1,0 +1,97 @@
+/* Catppuccin Mocha Palette */
+@define-color base #1e1e2e;
+@define-color mantle #181825;
+@define-color text #cdd6f4;
+@define-color red #f38ba8;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color blue #89b4fa;
+@define-color mauve #cba6f7;
+@define-color surface0 #313244;
+
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: @text;
+}
+
+/* Gaya Umum untuk Setiap Kotak Modul Terpisah */
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#battery,
+#clock,
+#tray,
+#workspaces {
+  background-color: @base;
+  padding: 0px 12px;
+  margin: 6px 4px;
+  border-radius: 8px;
+  border: 2px solid @surface0;
+}
+
+/* Warna Khusus per Modul */
+#pulseaudio {
+  color: @yellow;
+}
+
+#cpu {
+  color: @mauve;
+}
+
+#memory {
+  color: @blue;
+}
+
+#network {
+  color: @green;
+}
+
+#battery {
+  color: @yellow;
+}
+
+#battery.warning {
+  color: @peach;
+}
+
+#battery.critical {
+  color: @red;
+  animation: blink 1s infinite steps(1);
+}
+
+#clock {
+  color: @peach;
+}
+
+/* Workspaces styling */
+#workspaces button {
+  padding: 0 5px;
+  color: @text;
+  background: transparent;
+  border-radius: 4px;
+}
+
+#workspaces button.focused {
+  background-color: @surface0;
+  color: @mauve;
+}
+
+#workspaces button:hover {
+  background-color: @surface0;
+}
+
+@keyframes blink {
+  to {
+    background-color: @red;
+    color: @base;
+  }
+}
