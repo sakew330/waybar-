@@ -1,2 +1,2 @@
-# waybar-
-buat pengguna archlinux+hyprland boleh dicoba setingannya
+# waybar
+downloads and copy folder to ~/.config/waybar/
